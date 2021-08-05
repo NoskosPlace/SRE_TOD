@@ -12,6 +12,8 @@ https://www.youtube.com/watch?v=-q8Jj4aAWYw
 
 https://cloud.google.com/sdk/docs/quickstart
 
+https://cloud.google.com/sdk/docs/cheatsheet
+
 
 GCP docs and youtube were huge helps in learning more about the script
 
