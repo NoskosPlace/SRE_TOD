@@ -10,3 +10,4 @@ https://cloud.google.com/sdk/docs/quickstart
 
 
 GCP docs and youtube were huge helps in learning more about the script
+
