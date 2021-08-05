@@ -18,6 +18,6 @@ Steps for Startup.
 3)  reinitialize configuration 
 4)  Choose your account to perform the config for
 5)  Select the Project you are working in
-6)  Select your zone you are to work in ( I choose us-west4-b )
+6)  Select your zone you are to work in ( I choose us-west4-b, mainly cause that was the default that was set in running through step 1 of the project)
 7)  Run one of the scripts above to create a centOS7 VM with apache
 8)  Run delete script to stop and delete the VM
