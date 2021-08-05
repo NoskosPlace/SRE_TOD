@@ -1,27 +1,17 @@
 Basic script to Create a VM Using centOS7 and install Apache2
-
-gcloud beta compute --project=groovy-reducer-321223 instances namehere --zone=us-west4-b --metadata="startup-script=sudo yum install httpd -y" --image=centos-7-v20210721 --image-project=centos-cloud
-
-
+$ gcloud beta compute --project=groovy-reducer-321223 instances namehere --zone=us-west4-b --metadata="startup-script=sudo yum install httpd -y" --image=centos-7-v20210721 --image-project=centos-cloud
 
 More indepth script to create a vm with centOS7 and apache and not going off the default value. Pulled from the Command line in the GCP ui
-
-gcloud compute --project=groovy-reducer-321223 instances create namehere --zone=us-west4-b --machine-type=e2-micro --subnet=default --network-tier=PREMIUM --metadata="startup-script=sudo yum install httpd -y" --maintenance-policy=MIGRATE --service-account=282575665486-compute@developer.gserviceaccount.com --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --tags=http-server --image=centos-7-v20210721 --image-project=centos-cloud --boot-disk-size=20GB --boot-disk-type=pd-balanced --boot-disk-device-name=aug3rdtest2 --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --reservation-affinity=any
-
-
+$ gcloud compute --project=groovy-reducer-321223 instances create namehere --zone=us-west4-b --machine-type=e2-micro --subnet=default --network-tier=PREMIUM --metadata="startup-script=sudo yum install httpd -y" --maintenance-policy=MIGRATE --service-account=282575665486-compute@developer.gserviceaccount.com --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --tags=http-server --image=centos-7-v20210721 --image-project=centos-cloud --boot-disk-size=20GB --boot-disk-type=pd-balanced --boot-disk-device-name=aug3rdtest2 --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --reservation-affinity=any
 
 Saved a machine image to run in the future with smaller script 
-
-gcloud beta compute instances create machine-image-test --zone=us-west4-b --source-machine-image centos7-with-apache
-
-
+$ gcloud beta compute instances create machine-image-test --zone=us-west4-b --source-machine-image centos7-with-apache
 
 Deleting a Started VM Instance
+$ gcloud compute instances delete namehere
 
-gcloud compute instances delete namehere
 
-
-Steps from Startup. 
+Steps for Startup. 
 
 1)  Open CMD
 2)  run {gcloud init}
@@ -30,4 +20,4 @@ Steps from Startup.
 5)  Select the Project you are working in
 6)  Select your zone you are to work in ( I choose us-west4-b )
 7)  Run one of the scripts above to create a centOS7 VM with apache
-8)  Run delete script to stopand delete the VM
+8)  Run delete script to stop and delete the VM
